@@ -1,0 +1,14 @@
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+
+# logfiles and tempfiles.
+npm-debug.log
+/*.log
+/tmp
+
+# IDE FILES
+/.vscode

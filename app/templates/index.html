@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Travel Time App</title>
+   {# Stylesheets #}
+
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+</head>
+<body>
+   
+   <!--Overlay for modal-->
+   <div id="page-overlay" class="hidden"></div>
+
+   {# Components #}
+
+   {% include "header.html" %}
+   {% include "travel-time.html" %}
+   {% include "locations.html" %}    
+
+
+   {# JavaScript #}
+   <script src="{% static 'js/location-modal.js' %}"></script>
+
+</body>
+</html>

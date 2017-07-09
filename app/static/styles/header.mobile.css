@@ -1,0 +1,11 @@
+@media screen and (max-width: 576px) {
+
+   .header-text {
+      line-height: normal;
+   }
+
+   .small-screen {
+      display: block;
+   }
+
+}

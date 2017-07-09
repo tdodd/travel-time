@@ -1,0 +1,47 @@
+.location-container {
+   margin-top: 50px;   
+}  
+
+.no-locations {
+   text-align: center;
+}
+
+.location-header {
+   font-weight: normal;
+   font-size: 2em;
+}
+
+.location-icon {
+   width: 200px;
+   margin: 20px 0;
+}
+
+.location-list {
+   padding: 0;
+   width: 500px;
+   margin: 0 auto;
+}
+
+.location-list-item {
+   list-style-type: none;
+}
+
+.btn-container {
+   text-align: center;
+   margin: 45px 10px;
+}
+
+#add-location {
+   outline: none;
+   border: none;
+   border-radius: 3px;
+   text-transform: uppercase;
+   font-size: 1.5em;
+   padding: 10px 25px;
+   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3)
+}
+
+#add-location:hover {
+   cursor: pointer;
+   box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.35)
+}

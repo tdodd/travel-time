@@ -1,0 +1,130 @@
+#location-modal {
+   z-index: 100;
+   width: 500px;
+   position: absolute;
+   left: 50%;
+   bottom: 50%;
+   transform: translate(-50%,50%);
+   background: white;
+   border-radius: 0 0 2px 2px;
+   box-shadow: 0 10px 70px 0px rgba(0, 0, 0, 0.5);
+   color: black;
+   font-size: 3em;
+}
+
+.modal-in {
+   animation: modal-in-bottom .4s cubic-bezier(0.24, 0.44, 0.44, 1.4);
+}
+
+.modal-out {
+   animation: modal-out-bottom .4s cubic-bezier(0.38,-0.7, 0.58, 1);
+   animation-fill-mode: forwards;
+}
+
+@keyframes modal-in-top {
+   from {
+      top: -50%;
+   }
+
+   to {
+      top: 100px;
+   }
+}
+
+@keyframes modal-out-top {
+   from {
+      top: 100px;
+   }
+
+   to {
+      top: -50%;
+   }
+}
+
+@keyframes modal-in-bottom {
+   from {
+      bottom: -50%;
+   }
+
+   to {
+      bottom: 50%;
+   }
+}
+
+@keyframes modal-out-bottom {
+   from {
+      bottom: 50%;
+   }
+
+   to {
+      bottom: -50%;
+   }
+}
+
+.modal-header {
+   text-align: center;
+   background: #47576d;
+   box-shadow: 0 4px 4px -1px rgba(0,0,0,.8);
+   color: white;
+   padding: 0 50px;
+   margin-bottom: 30px;
+}
+
+.error-msg {
+   height: 0;
+   line-height: 50px;
+   vertical-align: middle;
+   overflow: hidden;
+   text-align: center;
+   background: pink;
+   color: red;
+   font-size: 0.6em;
+   margin-bottom: 25px;
+   animation: error .7s ease;
+   animation-fill-mode: forwards;
+}
+
+@keyframes error {
+   from {
+      height: 0;
+   }
+   to {
+      height: 50;
+   }
+}
+
+.input-container {
+   padding: 0 30px;
+}
+
+.modal-input {
+   display: block;
+   border: 1px solid lightgray;
+   border-radius: 2px;
+   width: 100%;
+   margin-bottom: 35px;
+   font-size: 0.5em;
+   padding: 10px 20px;
+
+}
+
+.modal-input:focus {
+   outline-color: #253f3f;
+}
+
+.form-btn {
+   width: 100%;
+   font-size: 0.5em;
+   margin-bottom: 25px;
+   border: none;
+   border-radius: 2px;
+   outline: none;
+   background: teal;
+   color: white;
+   padding: 10px 0;
+   text-transform: uppercase;
+}
+
+.form-btn:hover {
+   cursor: pointer;
+}

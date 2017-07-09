@@ -1,0 +1,21 @@
+@media screen and (max-width: 576px) {
+
+   #location-modal {
+      width: auto;
+      transform: none;
+      top: 100px;
+      left: 8px;
+      right: 8px;
+      bottom: initial;
+   }
+
+   .modal-in {
+      animation: modal-in-top .4s ease;
+   }
+
+   .modal-out {
+      animation: modal-out-top .4s ease;
+      animation-fill-mode: forwards;
+   }
+
+}

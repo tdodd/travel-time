@@ -1,0 +1,11 @@
+.travel-time.container {
+   text-align: center;
+}
+
+.travel-time.header {
+   font-size: 4em;
+}
+
+.travel-time.duration {
+   font-size: 2em;
+}

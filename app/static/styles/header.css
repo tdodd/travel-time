@@ -1,0 +1,19 @@
+header {
+   padding: 25px 0;
+   background: #333F4F;
+   box-shadow: 0 1px 5px 3px rgba(0,0,0,.8);
+}
+
+.small-screen {
+   display: none;
+   background: pink;
+}
+
+.header-text {
+   color: #FFF;
+   font-size: 4.5rem;
+   font-weight: 300;
+   text-align: center;
+   line-height: 150px;
+   vertical-align: middle;
+}

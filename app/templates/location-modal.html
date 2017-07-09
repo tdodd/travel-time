@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/location-modal.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/location-modal.mobile.css' %}" />
+
+<div id="location-modal" class="hidden">
+
+   <div class="modal-header">Add a Location</div>
+
+   <div class="error-msg hidden" id="error-msg">
+      Invalid Location
+   </div>
+
+   <div class="input-container">
+
+      <input type="text" class="modal-input" name="address" placeholder="Street address">
+      <input type="text" class="modal-input" name="city" placeholder="City">
+      <input type="text" class="modal-input" name="Province" placeholder="Province">
+
+      <input type="submit" class="form-btn" id="save-btn" value="Save">
+
+   </div>
+
+</div>
