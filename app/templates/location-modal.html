@@ -10,14 +10,16 @@
       Invalid Location
    </div>
 
-   <div class="input-container">
+   <form action="/location" method="POST" class="input-container">
+
+      {% csrf_token %}
 
       <input type="text" class="modal-input" name="address" placeholder="Street address">
       <input type="text" class="modal-input" name="city" placeholder="City">
-      <input type="text" class="modal-input" name="Province" placeholder="Province">
+      <input type="text" class="modal-input" name="province" placeholder="Province">
 
       <input type="submit" class="form-btn" id="save-btn" value="Save">
 
-   </div>
+   </form>
 
 </div>

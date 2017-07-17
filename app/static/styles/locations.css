@@ -1,19 +1,59 @@
-.location-container {
-   margin-top: 50px;   
-}  
+.inline {
+   display: inline-block;
+}
+
+.clearfix {
+   clear: both;
+}
+
+.pull-left {
+   float: left;
+}
+
+.pull-right {
+   float: right;
+}
 
 .no-locations {
    text-align: center;
 }
 
 .location-header {
-   font-weight: normal;
-   font-size: 2em;
+   text-align: center;
+   background: rgba(51, 63, 79,.3);
+   color: #FFF;
+   padding: 35px 0;
+   margin: 20px 0 75px 0;
+   font-weight: 300;
+   font-size: 2.5em;
+}
+
+.location-icon-lg {
+   width: 150px;
 }
 
 .location-icon {
-   width: 200px;
-   margin: 20px 0;
+   width: 20px;
+   height: 20px;
+   position: relative;
+   top: 3px;
+   background: url('../images/location-icon.png');
+   background-size: cover;
+}
+
+.delete-icon {
+   width: 25px;
+   height: 25px;
+   border: none;
+   position: relative;
+   top: 3px;
+   float: right;
+   background: url('../images/delete-icon.png');
+   background-size: cover;
+}
+
+.delete-icon:hover {
+   cursor: pointer;
 }
 
 .location-list {
@@ -22,13 +62,45 @@
    margin: 0 auto;
 }
 
-.location-list-item {
+.location-box {
+   width: 20px;
+   height: 20px;
+   position: relative;
+   right: 12px;
+   top: 5px;
+   border-radius: 3px;
+   border: 2px solid rgba(0,0,0,.6);
+   background: #F7F7F7;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.location-box:hover {
+   cursor: pointer;
+}
+
+.location-box:checked {
+   background: #68EFAD;
+}
+
+.location-box:focus {
+   outline: none;
+}
+
+.location-item {
    list-style-type: none;
+   background: white;
+   margin-bottom: 15px;
+   border-radius: 3px;
+   padding: 10px 25px;
+   font-size: 1.2em;
+   box-shadow: 0 1px 3px rgba(0,0,0,.7);
 }
 
 .btn-container {
    text-align: center;
-   margin: 45px 10px;
+   margin: 55px 10px;
 }
 
 #add-location {

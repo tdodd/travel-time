@@ -2,29 +2,47 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'styles/locations.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/locations.mobile.css' %}" />
 
 <div class="location-container">
 
 {% if locations %}
 
+   <div class="location-header">Locations</div>
+
    <ul class="location-list">
       {% for location in locations %}
          <li class="location-item">
 
-            <div class="location-address">{{ location.address }}</div>
-            <div class="location-city">{{ location.city }}</div>
-            <div class="location-province">{{ location.province }}</div>
-            <input type="checkbox" class="location-box" name="location-{{ location.id }}" value="{{ location.longitude }}, {{ location.latitude }}">
+            <div class="pull-left">
+               <div class="inline location-icon"></div>
+               <div class="inline location-address">{{ location.address }}</div>
+               <div class="inline location-city">({{ location.city }}, </div>
+               <div class="inline location-province">{{ location.province }})</div>
+            </div>
+         
+            <div class="pull-right">
 
+               <input type="checkbox" class="location-box" name="location-{{ location.id }}" value="{{ location.place_id }}">
+               
+               <form action="/location/{{ location.id }}" method="POST" class="inline">
+                  {% csrf_token %}
+                  <input type="hidden" name="_method" value="DELETE">
+                  <input type="submit" class="delete-icon" value="">
+               </form>
+               
+            </div>
+            
+            <div class="clearfix"></div>
+         </li>
       {% endfor %}
-      </li>
    </ul>
 
 {% else %}
 
    <div class="no-locations">
       <h1 class="location-header">You haven't added any locations</h1>
-      <img class="location-icon" src="{% static 'images/location-icon.png' %}" alt="No Locations">
+      <img class="location-icon-lg" src="{% static 'images/location-icon.png' %}" alt="No Locations">
    </div>
 
 {% endif %}
@@ -32,6 +50,8 @@
    <div class="btn-container">
       <button id="add-location">Add Location</button>
    </div>
+
+   {# Popup modal for adding locations #}
 
    {% include "location-modal.html" %} 
 
