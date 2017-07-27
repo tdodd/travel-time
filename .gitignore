@@ -1,5 +1,5 @@
 # local environment files
-/app/travel_time/.env
+/travel_time/env.py
 
 # compiled output
 /dist
