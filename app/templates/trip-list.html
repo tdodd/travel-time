@@ -1,0 +1,77 @@
+{# Stylesheets #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/trips.css' %}" />
+<link rel="stylesheet" href="{% static 'styles/trips.mobile.css' %}" />
+
+<div class="trips-container">
+
+   {% if location_list %}
+
+      <!-- Data for form autocomplete -->
+      <datalist id="location-list">
+         {% for location in location_list %}
+         
+            <option class="dl-option" value="{{ location.address }}">
+
+         {% endfor %}
+      </datalist>
+
+      <form action="/travel-time" method="POST" class="input-container" onsubmit="return validateLocations();">
+         {% csrf_token %}
+         <input type="text" name="from" id="from-input" class="location-input" placeholder="From" list="location-list" autocomplete="off">
+         <img src="{% static 'images/trips-icon2.png' %}" class="trips-icon" alt="Enter destinations">
+         <input type="text" name="to" id="to-input" class="location-input" placeholder="To" list="location-list" autocomplete="off"s>
+         <input type="submit" class="hidden">
+      </form>
+
+      <div class="help-msg">Enter locations you have saved</div>
+
+      {# Travel time display section #}
+      {% include "travel-time.html" %}
+      
+      {% if not trip_list %}
+      
+         <!-- No trips -->
+         <div class="no-trips">
+            <h1 class="no-trips-header">You have no saved trips</h1>
+            <img class="trips-icon-lg" src="{% static 'images/no-trips-icon.svg' %}" alt="No Trips">
+         </div>
+
+      {% else %}
+
+         <div class="trips-header">Saved Trips</div>
+
+         {% for trip in trip_list %}
+
+            <ul class="trip-list">
+               <li class="trip-item">
+
+                  <div class="trip-info">
+                     <div class="trip-name">
+                        From {{ trip.from_text }} to {{ trip.to_text }}
+                     </div>
+
+                     <div class="trip-time">
+                        Reminder: {{ trip.reminder_time }}
+                     </div>
+                  </div>
+
+                  <img class="edit-icon" src="{% static 'images/edit-icon.png' %}" alt="Edit this trip">
+
+               </li>
+            </ul>
+
+         {% endfor %}
+
+      {% endif %}
+
+   {% else %}
+
+      {% include "no-locations.html" %}
+
+   {% endif %}
+
+   {# Popup modal for adding trips #}
+   {% include "location-modal.html" %}
+
+</div>

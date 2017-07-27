@@ -1,6 +1,6 @@
 .travel-time-container {
    width: 400px;
-   margin: 30px auto 0 auto;
+   margin: 60px auto;
    padding: 15px 0;
    text-align: center;
    animation: fade-in 1.2s ease-in-out;
@@ -23,7 +23,7 @@
    width: 150px;
    font-size: 1.2em;
    padding: 15px 0;
-   margin: 30px auto;
+   margin: 30px auto 0 auto;
    border: 1px solid #333F4F;
    border-radius: 8px;
 }

@@ -1,0 +1,30 @@
+/* Medium screens */
+@media screen and (max-width: 900px) {
+
+   .location-input {
+      width: 70%;
+      margin: 35px 0;
+   }
+
+   .trips-icon {
+      display: none;
+   }
+
+   .trip-list {
+      width: 80%;
+   }
+
+}
+
+/* Small screens */
+@media screen and (max-width: 576px) {
+
+   .location-input {
+      width: 90%;
+   }
+
+   .trip-list {
+      width: 95%;
+   }
+
+}

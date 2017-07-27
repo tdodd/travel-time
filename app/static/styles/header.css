@@ -1,19 +1,44 @@
 header {
    padding: 25px 0;
    background: #333F4F;
-   box-shadow: 0 1px 5px 3px rgba(0,0,0,.8);
+   text-align: center;
 }
 
+/* TODO: REMOVE THIS */
 .small-screen {
    display: none;
    background: pink;
 }
 
-.header-text {
+.header-text a {
    color: #FFF;
    font-size: 4.5rem;
    font-weight: 300;
-   text-align: center;
    line-height: 150px;
    vertical-align: middle;
+   text-decoration: none;
+}
+
+.menu {
+   border-top: 5px solid #42A5F5;
+   padding: 10px 0;
+   margin: 0;
+   background: #BBDEFB;
+   text-align: center;
+}
+
+.menu li a {
+   text-decoration: none;
+   color: #000;
+}
+
+.menu li {
+   display: inline-block;
+   font-size: 1.6em;
+   font-weight: 300;
+   margin: 0 15px;
+}
+
+.active {
+   border-bottom: 2px solid;
 }

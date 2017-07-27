@@ -1,3 +1,6 @@
+# local environment files
+/app/travel_time/.env
+
 # compiled output
 /dist
 /tmp

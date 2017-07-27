@@ -8,5 +8,21 @@
 <div class="small-screen">Screen is small</div>
 
 <header>
-   <div class="header-text">Travel Times</div>
+   <div class="header-text">
+      <a href="/">Travel Time</a>
+   </div>
 </header>
+
+<ul class="menu">
+   {% if request.path == '/locations' or request.path == '/' %}
+      <li><a href="/locations" class="active">Locations</a></li>
+   {% else %}   
+      <li><a href="/locations">Locations</a></li>
+   {% endif %}
+
+   {% if request.path == '/trips' %}
+      <li><a href="/trips" class="active">Trips</a></li>
+   {% else %}   
+      <li><a href="/trips">Trips</a></li>
+   {% endif %}
+</ul>

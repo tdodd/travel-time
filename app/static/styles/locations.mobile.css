@@ -1,0 +1,8 @@
+@media screen and (max-width: 576px) {
+
+   .location-list {
+      width: auto;
+      margin: 15px;
+   }
+
+}

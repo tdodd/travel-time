@@ -1,20 +1,18 @@
 {# Stylesheets #}
-
 {% load static %}
 <link rel="stylesheet" href="{% static 'styles/travel-time.css' %}" />
 
 {# Only display once data has been fetched #}
+{% if travel_time %}
 
-{% if duration %}
-
-   <div class="travel-time-container ">
+   <div class="travel-time-container" id="travel-time-container">
 
       <div class="travel-time-header">
-         {{ starting_point }} to {{ destination }}
+         {{ origin }} to {{ destination }}
       </div>
 
       <div class="travel-time-duration">
-         {{ duration }} minutes
+         {{ travel_time }}
       </div>
 
    </div>

@@ -1,5 +1,8 @@
 import os
 
+# Environment File
+import env
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -10,7 +13,6 @@ SECRET_KEY = '0gxty-rmeoa7m!4)gjldm6&7ojzf9*-4umrs&j(hut6edt%v)y'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -63,12 +65,12 @@ WSGI_APPLICATION = 'travel_time.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'travel_db',
-        'USER': 'tom',
-        'PASSWORD': 'tom',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
+        'ENGINE': env.DB_ENGINE,
+        'NAME': env.DB_NAME,
+        'USER': env.DB_USER,
+        'PASSWORD': env.DB_PASSWORD,
+        'HOST': env.DB_HOST,
+        'PORT': env.DB_PORT
     }
 }
 
@@ -104,7 +106,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

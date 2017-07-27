@@ -12,9 +12,6 @@ body {
    font-family: 'Open Sans', sans-serif;
 }
 
-.hidden {
-   display: none;
-}
 
 #page-overlay {
    background: rgba(0,0,0,.4);
@@ -25,3 +22,10 @@ body {
    height: 100%;
    min-height: 100%;
 }
+
+/* Re-usable classes */
+.hidden { display: none; }
+.inline { display: inline-block; }
+.clearfix { clear: both; }
+.pull-left { float: left; }
+.pull-right { float: right; }
