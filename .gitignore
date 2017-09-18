@@ -4,6 +4,7 @@
 # compiled output
 /dist
 /tmp
+**/*.pyc
 
 # dependencies
 /node_modules
@@ -13,5 +14,5 @@ npm-debug.log
 /*.log
 /tmp
 
-# IDE FILES
+# ide files
 /.vscode

@@ -3,9 +3,6 @@ from django.shortcuts import render, redirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.generic.list import ListView
 
-# TODO: REMOVE THIS
-from django.http import HttpResponse
-
 import os, urllib2, json
 
 from models import Location, Trip
@@ -66,7 +63,7 @@ def get_place_id(request):
    prov = request.POST['province'].replace(" ", "+")
    
    # Build query to send to Google
-   params = '?address=' + addr + ',' + cty + ',' + prov + '&key=' + API_KEY
+   params = '?address=' + addr + ',' + cty + ',' + prov + '&key=' + env.API_KEY
    query = API_ENDPOINT_GEOCODE + params
 
    # Get coordinates from maps API using urllib2
@@ -76,10 +73,6 @@ def get_place_id(request):
    # Extract place_id from response
    place_id = [key['place_id'] for key in google_response['results']]
    return place_id[0]
-
-# Update Location
-def update_location(request, locationID):
-    return render(request, 'index.html', { 'header_text': header_text })
 
 # Delete Location
 def delete_location(request, location_id):

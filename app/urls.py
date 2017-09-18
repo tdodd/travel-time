@@ -9,6 +9,9 @@ urlpatterns = [
     # /location
     url(r'^locations$', views.LocationListView.as_view()),
 
+    #/location
+    url(r'^location$', views.create_location),
+
     # /location/12345
     url(r'^location/([0-9]+)$', views.delete_location),
 
