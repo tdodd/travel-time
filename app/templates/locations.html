@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="{% static 'styles/locations.css' %}" />
 <link rel="stylesheet" href="{% static 'styles/locations.mobile.css' %}" />
 
+<div class="btn-container">
+   <button id="add-location">Add Location</button>
+</div>
+
 <div class="location-container">
 
 {% if locations %}
@@ -40,10 +44,6 @@
    {% include "no-locations.html" %}
 
 {% endif %}
-
-   <div class="btn-container">
-      <button id="add-location">Add Location</button>
-   </div>
 
    {# Popup modal for adding locations #}
    {% include "location-modal.html" %} 

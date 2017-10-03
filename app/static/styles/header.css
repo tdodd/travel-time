@@ -17,6 +17,19 @@ header {
    line-height: 150px;
    vertical-align: middle;
    text-decoration: none;
+   opacity: 0;
+   animation: header-fade 2.5s ease;
+   animation-delay: .2s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes header-fade {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }
 
 .menu {
@@ -25,6 +38,7 @@ header {
    margin: 0;
    background: #BBDEFB;
    text-align: center;
+   box-shadow: 0 1px 3px 0px black;
 }
 
 .menu li a {
@@ -39,6 +53,19 @@ header {
    margin: 0 15px;
 }
 
+.menu li::after {
+   content: '';
+   display: block;
+   width: 0;
+   height: 1px;
+   background: #000;
+   transition: width .3s;
+}
+
+.menu li:hover::after {
+   width: 100%;
+}
+
 .active {
-   border-bottom: 2px solid;
+   border-bottom: 1px solid;
 }

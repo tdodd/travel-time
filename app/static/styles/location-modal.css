@@ -1,63 +1,48 @@
 #location-modal {
    z-index: 100;
    width: 500px;
-   position: absolute;
-   left: 50%;
-   bottom: 50%;
-   transform: translate(-50%,50%);
+   position: fixed;
+   top: 15%;
+   left: 0;
+   right: 0;
+   margin: 8px auto;
    background: white;
    border-radius: 0 0 2px 2px;
-   box-shadow: 0 10px 70px 0px rgba(0, 0, 0, 0.5);
    color: black;
    font-size: 3em;
+   transform: scale(.5);
+   box-shadow: 0 10px 70px 0px rgba(0, 0, 0, 0.5);
 }
+
+/* Modal Animations */
 
 .modal-in {
-   animation: modal-in-bottom .4s cubic-bezier(0.24, 0.44, 0.44, 1.4);
-}
-
-.modal-out {
-   animation: modal-out-bottom .4s cubic-bezier(0.38,-0.7, 0.58, 1);
+   animation: modal-in .6s ease-in-out;
    animation-fill-mode: forwards;
 }
 
-@keyframes modal-in-top {
+.modal-out {
+   animation: modal-out .4s ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+@keyframes modal-in {
    from {
-      top: -50%;
+      transform: scale(.5);
    }
 
    to {
-      top: 100px;
+      transform: scale(1);
    }
 }
 
-@keyframes modal-out-top {
+@keyframes modal-out {
    from {
-      top: 100px;
+      transform: scale(1);
    }
-
+   
    to {
-      top: -50%;
-   }
-}
-
-@keyframes modal-in-bottom {
-   from {
-      bottom: -50%;
-   }
-
-   to {
-      bottom: 50%;
-   }
-}
-
-@keyframes modal-out-bottom {
-   from {
-      bottom: 50%;
-   }
-
-   to {
-      bottom: -50%;
+      transform: scale(.5);
    }
 }
 
